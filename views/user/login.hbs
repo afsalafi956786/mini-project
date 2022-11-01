@@ -1,0 +1,72 @@
+  
+  {{!-- end style --}}
+  <head>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+
+  </head>
+
+  <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <form action="/login" method="POST" class="col-md-9">
+           <i class="fa fa-user-o"></i>
+                
+                <div class="AppForm shadow-lg">
+                    <div class="row">
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="AppFormLeft">
+
+                                <h1>Login</h1>
+                                <div class="form-group position-relative mb-4">
+                                    <input type="email"  name="email" class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none" id="email"
+                                        placeholder="Email">
+                                        {{#if loginErr}}
+                   <p class="error text-danger">Invalid email</p>
+                        
+                                    {{/if}}
+                                        
+                                </div>
+                                <div class="form-group position-relative mb-4">
+                                    <input type="password" name="password" class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none" id="password"
+                                        placeholder="Password">
+                                        <i class="fa fa-key"></i>
+                                        {{#if loginErr}}
+                                        <p class="error text-danger">Invalid password</p>
+                                        {{/if}}
+                                        
+
+                                </div>
+                                <div class="row  mt-4 mb-4">
+                                    <div class="col-md-6 text-right">
+                                        <a href="#">Forgot Password?</a>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-success btn-block shadow border-0 py-2 text-uppercase ">
+                                    Login
+                                </button>
+
+                                <p class="text-center mt-5">
+                                    Don't have an account?
+                                    <a href="/signup" style="text-decoration:none">
+                                    <span >
+                                        Create new account
+                                    </span>
+                                    </a>
+
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="AppFormRight position-relative d-flex justify-content-center flex-column align-items-center text-center p-5 text-white">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+   
